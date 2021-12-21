@@ -1,64 +1,67 @@
 <html>
   <head>
     <title>Task-2</title>
+   <link rel="stylesheet" href="css/vendor/fontawesome-free-5.15.1-web/css/all.css">
     <link rel="stylesheet" href="css/employee.css" />
-    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href="css/element.css" />
   </head>
 </html>
 <body>
-  <div class="parent-div">
+  <div class="fullContent">
     <!-- head -->
-    <div class="heading-div">
+
+    <header>
       <h3>Add Employee Details</h3>
-    </div>
+    </header>
     <!-- head -->
     <!-- bod for this div -->
-    <div class="child-div">
+    <article>
       <!--  -->
       <form>
         <div class="row">
-          <div class="child-label"><label>Name:</label></div>
-          <div class="child-input">
-            <input type="text" placeholder="Name" class="form-control" />
+          <div class="col-1"><label>Name:</label></div>
+          <div class="col-2">
+            <input type="text" placeholder="Name" class="form-control required" />
           </div>
-          <div class="child-label"><label>Age:</label></div>
-          <div class="child-input">
-            <input type="text" placeholder="Age" class="form-control" />
-          </div>
-        </div>
-        <!--  -->
-        <div class="row">
-          <div class="child-label"><label>Gender:</label></div>
-          <div class="child-input">
-            <input type="text" placeholder="Gender" class="form-control" />
-          </div>
-          <div class="child-label"><label>Basic Pay:</label></div>
-          <div class="child-input">
-            <input type="text" placeholder="Basic-Pay" class="form-control" />
+          <div class="col-1"><label>Age:</label></div>
+          <div class="col-2">
+            <input type="text" placeholder="Age" class="form-control required" />
           </div>
         </div>
         <!--  -->
         <div class="row">
-          <div class="child-label"><label>Id Proof:</label></div>
-          <div class="child-input">
-            <input type="text" placeholder="Id" class="form-control" />
+          <div class="col-1"><label>Gender:</label></div>
+          <div class="col-2">
+            <input type="text" placeholder="Gender" class="form-control required" />
           </div>
-          <div class="child-label"><label>Address:</label></div>
-          <div class="child-input">
-            <input type="text" placeholder="Address" class="form-control" />
+          <div class="col-1"><label>Basic Pay:</label></div>
+          <div class="col-2">
+            <input type="text" placeholder="Basic-Pay" class="form-control required" />
           </div>
         </div>
         <!--  -->
-        <div class="button-div">
-          <button class="addEm">Add</button>
+        <div class="row">
+          <div class="col-1"><label>Id Proof:</label></div>
+          <div class="col-2">
+            <input type="text" placeholder="Id" class="form-control required" />
+          </div>
+          <div class="col-1"><label>Address:</label></div>
+          <div class="col-2">
+            <input type="text" placeholder="Address" class="form-control required" />
+          </div>
         </div>
+        <!--  -->
+       <footer>
+          <button type="submit" class="addEm">Add</button>
+       </footer>
 
     <!-- body for this div -->
-  </div>
-  
+   
+  </article>
   <br />
-  <div class="table-div">
-    <table id="table">
+  <div >
+
+    <table id="employeeDisplay">
         <thead>
       <tr>
         <th>Name</th>
@@ -71,56 +74,56 @@
         <th>Delete</th>
       </tr>
       </thead>
-      <tbody></tbody>
+      <tbody id="employeeTd"></tbody>
     </table>
   </div>
-  
+
 <!-- The Modal -->
-<div id="edit-div" >
+<div id="editModal" >
 
   <!-- Modal content -->
-  <div class="edit-content">
+  <div class="editContent">
    <!--  -->
    
     
       <a id="close"><i class="far fa-times-circle"></i></a>
    <br>
     <div class="row">
-      <div class="child-label"><label>Name:</label></div>
-      <div class="child-input">
-        <input type="text" placeholder="Name" id="edit_name" class="form-control" />
+      <div class="col-1"><label>Name:</label></div>
+      <div class="col-2">
+        <input type="text" placeholder="Name" id="edit_name" class="form-control editInput " />
       </div>
-      <div class="child-label"><label>Age:</label></div>
-      <div class="child-input">
-        <input type="text" placeholder="Age" id="edit_Age" class="form-control" />
-      </div>
-    </div>
-    <!--  -->
-    <div class="row">
-      <div class="child-label"><label>Gender:</label></div>
-      <div class="child-input">
-        <input type="text" placeholder="Gender" id="edit_Gender" class="form-control" />
-      </div>
-      <div class="child-label"><label>Basic Pay:</label></div>
-      <div class="child-input">
-        <input type="text" placeholder="Basic-Pay" id="edit_Basic" class="form-control" />
+      <div class="col-1"><label>Age:</label></div>
+      <div class="col-2">
+        <input type="text" placeholder="Age" id="edit_Age" class="form-control editInput " />
       </div>
     </div>
     <!--  -->
     <div class="row">
-      <div class="child-label"><label>Id Proof:</label></div>
-      <div class="child-input">
-        <input type="text" placeholder="Id" id="edit_Proof" class="form-control" />
+      <div class="col-1"><label>Gender:</label></div>
+      <div class="col-2">
+        <input type="text" placeholder="Gender" id="edit_Gender" class="form-control editInput" />
       </div>
-      <div class="child-label"><label>Address:</label></div>
-      <div class="child-input">
-        <input type="text" placeholder="Address" id="edit_Address" class="form-control" />
+      <div class="col-1"><label>Basic Pay:</label></div>
+      <div class="col-2">
+        <input type="text" placeholder="Basic-Pay" id="edit_Basic" class="form-control editInput " />
       </div>
     </div>
     <!--  -->
-    <div class="button-div">
-      <button class="editEm">Update</button>
+    <div class="row">
+      <div class="col-1"><label>Id Proof:</label></div>
+      <div class="col-2">
+        <input type="text" placeholder="Id" id="edit_Proof" class="form-control editInput " />
+      </div>
+      <div class="col-1"><label>Address:</label></div>
+      <div class="col-2">
+        <input type="text" placeholder="Address" id="edit_Address" class="form-control editInput" />
+      </div>
     </div>
+    <!--  -->
+   <footer>
+      <button id="editEm">Update</button>
+    </footer>
 
 <!-- body for this div -->
 </div>

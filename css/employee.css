@@ -1,4 +1,4 @@
-.parent-div {
+.fullContent {
   border: 1px solid #29afca;
   width: 95%;
   padding-bottom: 20px;
@@ -6,13 +6,13 @@
   margin-left: 2%;
   position: relative;
 }
-.heading-div {
+header {
   border: 1px solid #29afca;
   text-align: center;
   color: white;
   background-color: #29afca;
 }
-.child-div {
+article {
   width: 98%;
   margin: 10px;
 
@@ -31,7 +31,7 @@
   height: 10%;
 }
 
-.child-label {
+.col-1 {
   margin-top: 15px;
   float: left;
   width: 15%;
@@ -41,13 +41,13 @@
   padding: 10px 10px 10px 0px;
 }
 
-.child-input {
+.col-2 {
   margin-top: 15px;
   float: left;
   width: 33%;
   height: 40px;
 }
-.child-input input {
+.col-2 input {
   height: 36px;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -59,7 +59,7 @@
   padding-left: 10px;
 }
 .addEm,
-.editEm {
+#editEm {
   background-color: #29afca;
   color: white;
   padding: 5px;
@@ -91,10 +91,6 @@ th,
 td {
   border-collapse: collapse;
 }
-.glow {
-  border: 1ox solid skyblue;
-  box-shadow: 1px 2px 2px 2px skyblue;
-}
 
 .edit {
   color: blue;
@@ -109,8 +105,7 @@ td {
   cursor: pointer;
   font-size: 22px;
 }
-#edit-div {
-  display: none;
+#editModal {
   position: fixed;
   z-index: 1;
   border: 1px solid rgb(241, 240, 240);
@@ -132,6 +127,11 @@ td {
 #close:hover {
   cursor: pointer;
 }
-.requried {
+.mandatory {
   box-shadow: 2px 2px 4px 4px rgb(235, 135, 135);
+}
+
+.form-control:focus {
+  border: 1ox solid skyblue;
+  box-shadow: 1px 2px 2px 2px skyblue;
 }

@@ -1,0 +1,6 @@
+.pointer {
+  pointer-events: none;
+}
+.displaynone {
+  display: none;
+}
